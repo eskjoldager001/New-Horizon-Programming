@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class primeorcomposite2
+{
+    public static void main( String args[] )
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the integer: ");
+        int number = input.nextInt();
+        int j = 2;
+        
+        int i = 0;
+        while( j <= number - 1)
+        {
+            if (number % ++j == 0)
+            {
+                i = i + 1; 
+            }
+        }            
+        if (i > 2)
+            System.out.println(number + " is composite");
+            else
+        {
+            System.out.println (number + " is prime");
+        }
+            
+            
+            
+         
+        }
+}
+
