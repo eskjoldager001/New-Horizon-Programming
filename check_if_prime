@@ -1,0 +1,66 @@
+import java.util.Scanner;
+
+public class check_if_prime
+{
+
+    public static boolean check_If_Prime(int p)
+    {
+        int i = 2;
+        boolean m = true;
+
+        if(p == 1 || p == 0)
+        {
+            return false;
+        }
+        else
+        {
+            while (i <= Math.sqrt(p) && m==true)
+            {
+                if (p % i == 0)
+                {
+                    m = false;
+                }
+                else
+                {
+                    i++;
+                }
+            }
+
+            if (m == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
+
+    public static void main (String args[])
+    {
+        int z;
+        
+        int sum = 0;
+        int s= 2;
+        System.out.println("Input A Number Greater Than Zero:");
+        int digit;
+        Scanner m = new Scanner (System.in);
+        z = m.nextInt(); 
+        while (z!= 0)
+        {
+            digit = z % 10;
+
+            if (check_If_Prime(digit))
+            {
+                sum = sum + digit; 
+
+            }  
+            z = z/10;
+
+        }
+        System.out.println("the sum is " + sum);
+
+    }
+}
+
